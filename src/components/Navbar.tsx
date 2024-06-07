@@ -71,7 +71,7 @@ export default async function Navbar() {
               </li>
               {current ? (
                 <li>
-                  <SignOutButton redirectUrl={"/"} />
+                  <SignOutButton redirectUrl={"/loggedout"} />
                 </li>
               ) : (
                 <li>
