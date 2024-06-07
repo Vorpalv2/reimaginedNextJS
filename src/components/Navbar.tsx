@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default async function Navbar() {
   const current = await currentUser();
-  console.log(current?.id);
+  console.log(current?.fullName);
 
   return (
     <div className="container ">
@@ -19,6 +19,9 @@ export default async function Navbar() {
           </Link>
           <Link href={"/all-post"} className="btn btn-ghost text-xl">
             All Post
+          </Link>
+          <Link href={"/themes"} className="btn btn-ghost text-xl">
+            Themes
           </Link>
         </div>
         <div className="flex-none gap-2">
