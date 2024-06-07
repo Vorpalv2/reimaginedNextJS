@@ -14,15 +14,20 @@ export default async function Navbar() {
           <Link href={"/"} className="btn btn-ghost text-xl">
             Home
           </Link>
-          <Link href={"/create"} className="btn btn-ghost text-xl">
-            Create Post
-          </Link>
-          <Link href={"/all-post"} className="btn btn-ghost text-xl">
-            All Post
-          </Link>
-          <Link href={"/themes"} className="btn btn-ghost text-xl">
-            Themes
-          </Link>
+
+          {current && (
+            <>
+              <Link href={"/create"} className="btn btn-ghost text-xl">
+                Create Post
+              </Link>
+              <Link href={"/all-post"} className="btn btn-ghost text-xl">
+                All Post
+              </Link>
+              <Link href={"/themes"} className="btn btn-ghost text-xl">
+                Themes
+              </Link>
+            </>
+          )}
         </div>
         <div className="flex-none gap-2">
           <div className="form-control">
@@ -66,7 +71,7 @@ export default async function Navbar() {
               </li>
               {current ? (
                 <li>
-                  <SignOutButton redirectUrl={"/logged-out"} />
+                  <SignOutButton redirectUrl={"/"} />
                 </li>
               ) : (
                 <li>
