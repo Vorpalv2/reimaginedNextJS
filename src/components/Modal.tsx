@@ -1,26 +1,30 @@
 "use client";
-import React, { ReactNode } from "react";
+import React from "react";
+import ThemeComponent from "./ThemeComponent";
 
-function Modal({ children }: any) {
+interface ModalType {
+  children: React.ReactNode;
+  ModalName: string;
+}
+
+function Modal({ children, ModalName }: ModalType) {
   return (
     <div>
       <button
         className="btn"
         // onClick={() => document.getElementById("my_modal_2").showModal()}
-        onClick={() => document.getElementById("loginModal")!.showModal()}
+        onClick={() => document.getElementById("Modal")!.showModal()}
       >
-        Login
+        {ModalName}
       </button>
-      <dialog id="loginModal" className="modal">
+      <dialog id="Modal" className="modal">
         <div className="modal-box m-4 p-4">
-          {/* <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Press ESC key or click outside to close</p> */}
           {children}
-          <form method="dialog" className="modal-backdrop text-black ">
+          {/* <form method="dialog" className="modal-backdrop text-black ">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
               ✕
             </button>
-          </form>
+          </form> */}
         </div>
       </dialog>
     </div>

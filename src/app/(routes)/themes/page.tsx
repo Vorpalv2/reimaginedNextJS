@@ -2,7 +2,7 @@ import Modal from "@/components/Modal";
 function ThemePage() {
   return (
     <div>
-      <Modal />
+      <Modal ModalName="Theme Selector from Theme Page" />
     </div>
   );
 }

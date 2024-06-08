@@ -31,21 +31,16 @@ export default async function Navbar() {
             </>
           ) : (
             <Link href={"/"}>
-              <Modal>
+              <Modal ModalName={"Sign In"}>
                 <SignIn routing="hash" />
               </Modal>
             </Link>
           )}
         </div>
         <div className="flex-none gap-2">
-          <ThemeComponent />
-          {/* <div className="form-control">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-24 md:w-auto"
-            />
-          </div> */}
+          <Modal ModalName={"Theme Switcher"}>
+            <ThemeComponent />
+          </Modal>
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
