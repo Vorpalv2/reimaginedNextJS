@@ -1,11 +1,8 @@
-import ThemeComponent from "@/components/ThemeComponent";
-import { ThemeController } from "@/components/ThemeController";
-import React from "react";
-
+import Modal from "@/components/Modal";
 function ThemePage() {
   return (
     <div>
-      <ThemeController />
+      <Modal />
     </div>
   );
 }

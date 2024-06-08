@@ -1,8 +1,9 @@
-import { SignInButton, SignOutButton } from "@clerk/nextjs";
+import { SignIn, SignInButton, SignOutButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 import ThemeComponent from "./ThemeComponent";
+import Modal from "./Modal";
 
 export default async function Navbar() {
   const current = await currentUser();
@@ -16,7 +17,7 @@ export default async function Navbar() {
             Home
           </Link>
 
-          {current && (
+          {current ? (
             <>
               <Link href={"/create"} className="btn btn-ghost text-xl">
                 Create Post
@@ -28,6 +29,12 @@ export default async function Navbar() {
                 Themes
               </Link>
             </>
+          ) : (
+            <Link href={"/"}>
+              <Modal>
+                <SignIn routing="hash" />
+              </Modal>
+            </Link>
           )}
         </div>
         <div className="flex-none gap-2">
