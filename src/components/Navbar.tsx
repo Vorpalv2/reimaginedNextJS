@@ -2,6 +2,7 @@ import { SignInButton, SignOutButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
+import ThemeComponent from "./ThemeComponent";
 
 export default async function Navbar() {
   const current = await currentUser();
@@ -30,13 +31,14 @@ export default async function Navbar() {
           )}
         </div>
         <div className="flex-none gap-2">
-          <div className="form-control">
+          <ThemeComponent />
+          {/* <div className="form-control">
             <input
               type="text"
               placeholder="Search"
               className="input input-bordered w-24 md:w-auto"
             />
-          </div>
+          </div> */}
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}

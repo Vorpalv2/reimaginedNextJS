@@ -21,7 +21,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" className="theme-controller" data-theme="default">
         <body className={inter.className}>
-          <ThemeController />
+          {/* <ThemeController /> */}
           <Navbar />
           <div className="container pt-12">{children}</div>
         </body>
