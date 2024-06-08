@@ -12,16 +12,16 @@ function Modal({ children }: any) {
         Login
       </button>
       <dialog id="loginModal" className="modal">
-        <div className="modal-box">
+        <div className="modal-box m-4 p-4">
           {/* <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Press ESC key or click outside to close</p> */}
           {children}
+          <form method="dialog" className="modal-backdrop text-black ">
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
+          </form>
         </div>
-        <form method="dialog" className="modal-backdrop">
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-            ✕
-          </button>
-        </form>
       </dialog>
     </div>
   );
