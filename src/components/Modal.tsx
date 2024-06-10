@@ -18,14 +18,18 @@ function Modal({ children, ModalName }: ModalType) {
         {ModalName}
       </button>
       <dialog id="Modal" className="modal">
-        <div className="modal-box m-4 p-4">
+        <div className="modal-box p-2 m-2">
           {children}
-          {/* <form method="dialog" className="modal-backdrop text-black ">
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 text-white top-2">
               ✕
             </button>
-          </form> */}
+          </form>
         </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
       </dialog>
     </div>
   );
