@@ -30,11 +30,9 @@ export default async function Navbar() {
               </Link>
             </>
           ) : (
-            <Link href={"/"}>
-              <Modal ModalName={"Sign In"}>
-                <SignIn routing="hash" />
-              </Modal>
-            </Link>
+            <Modal ModalName={"Sign In"}>
+              <SignIn routing="hash" />
+            </Modal>
           )}
         </div>
         <div className="flex-none gap-2">
