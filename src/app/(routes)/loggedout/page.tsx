@@ -1,9 +1,10 @@
+import Toast from "@/components/Toast";
 import React from "react";
 
 function LogoutPage() {
   return (
     <div className="container">
-      <h1>Logout Successful</h1>
+      <Toast toastClass="alert-info" toastMessage="Signed Out" />
     </div>
   );
 }
