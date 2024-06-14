@@ -3,8 +3,10 @@ import React from "react";
 function TextArea() {
   return (
     <>
-      <label htmlFor="input">Post:</label>
+      <label htmlFor="bio">Post:</label>
       <textarea
+        row={40}
+        name="bio"
         className="textarea textarea-bordered "
         placeholder="Bio"
       ></textarea>
