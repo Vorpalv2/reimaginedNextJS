@@ -11,22 +11,10 @@ function Post() {
 
   const [data, setData] = useState([]);
 
-  // console.log(params);
-
-  useEffect(() => {
-    async function fetchPost() {
-      console.log(await fetchSpecificPost(searchTerm));
-      let dat: [] = await fetchSpecificPost(searchTerm);
-      setData(dat);
-      console.log(dat);
-    }
-
-    fetchPost();
-  }, [searchTerm]);
-
-  // console.log(data);
-
-  // // console.log(params.post[1]);
+  (async () => {
+    const dat = await fetchSpecificPost(searchTerm);
+    console.log(dat, "dat");
+  })();
 
   return (
     <div>

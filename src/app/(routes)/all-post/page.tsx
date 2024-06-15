@@ -5,7 +5,7 @@ import React from "react";
 
 async function AllPosts() {
   const postsFromDatabase = await fetchPostsFromDB();
-  console.log(postsFromDatabase[1]);
+  // console.log(postsFromDatabase[1]);
 
   if (!postsFromDatabase || postsFromDatabase.length === 0) {
     return <p>Loading posts... or No posts found</p>;

@@ -7,7 +7,7 @@ import Modal from "./Modal";
 
 export default async function Navbar() {
   const current = await currentUser();
-  console.log(current?.fullName);
+  // console.log(current?.fullName);
 
   return (
     <div className="container ">

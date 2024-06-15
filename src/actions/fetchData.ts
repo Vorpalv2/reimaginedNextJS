@@ -18,7 +18,7 @@ export async function fetchPostsFromDB(): Promise<Post[]> {
           return;
         } else {
           posts.push(row); // Add each row to the array.
-          console.log(posts, "posts");
+          // console.log(posts, "posts");
           resolve(posts); // Resolve the promise with the posts array.
         }
       },
@@ -41,7 +41,7 @@ export async function fetchSpecificPost(
   return new Promise((resolve, reject) => {
     const post: Post[] = [];
 
-    console.log(postSlugTitle, "slug title");
+    // console.log(postSlugTitle, "slug title");
 
     const statement = `SELECT title,body FROM postData WHERE title = ${slugReverser(
       postSlugTitle

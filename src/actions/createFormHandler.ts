@@ -10,5 +10,5 @@ export default async function handleFormSubmit(formdata: FormData) {
 
   db.run(statement, [input, bio]);
 
-  console.log(input, bio);
+  // console.log(input, bio);
 }
