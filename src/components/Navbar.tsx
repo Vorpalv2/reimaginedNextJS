@@ -28,6 +28,15 @@ export default async function Navbar() {
               <Link href={"/themes"} className="btn btn-ghost text-xl">
                 Themes
               </Link>
+              <Link href={"/Services"} className="btn btn-ghost text-xl">
+                Services
+              </Link>
+              <Link
+                href={"/custom/styles/grid-background"}
+                className="btn btn-ghost text-xl"
+              >
+                Background
+              </Link>
             </>
           ) : (
             <Modal ModalName={"Sign In"}>

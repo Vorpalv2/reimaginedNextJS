@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import { ThemeController } from "@/components/ThemeController";
+import { ViewTransitions } from "next-view-transitions";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,13 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className="theme-controller" data-theme="default">
-        <body className={inter.className}>
-          {/* <ThemeController /> */}
-          <Navbar />
-          <div className="container pt-12">{children}</div>
-        </body>
-      </html>
+      <ViewTransitions>
+        <html lang="en" className="theme-controller" data-theme="default">
+          <body className={inter.className}>
+            {/* <ThemeController /> */}
+            <Navbar />
+            <div className="pt-12">{children}</div>
+          </body>
+        </html>
+      </ViewTransitions>
     </ClerkProvider>
   );
 }
